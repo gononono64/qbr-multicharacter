@@ -66,7 +66,8 @@ RegisterNetEvent('qbr-multicharacter:server:createCharacter', function(data, ena
     if exports['qbr-core']:Login(src, false, newData) then
         exports['qbr-core']:ShowSuccess(GetCurrentResourceName(), GetPlayerName(src)..' has succesfully loaded!')
         exports['qbr-core']:RefreshCommands(src)
-        --[[if enabledhouses then loadHouseData() end]] -- Enable once housing is ready
+        -- if enabledhouses then loadHouseData() end --[Enable once housing is ready]
+
         TriggerClientEvent("qbr-multicharacter:client:closeNUI", src)
         TriggerClientEvent('qbr-spawn:client:setupSpawnUI', src, newData, true)
         GiveStarterItems(src)
